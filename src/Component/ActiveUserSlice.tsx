@@ -16,7 +16,7 @@ function UserSlice() {
 
           </div>
        
-        <p className='text-sm '>Click here to the contact info...</p>
+        <p className='md:text-sm text-[10px]'>Click here to the contact info...</p>
         </div>
         
         <div className='flex ml-auto gap-6 mr-3'>

@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-   <div className=' h-screen w-full  flex'>
+   <div className=' h-screen w-full flex'>
     <Left></Left>
     <Right></Right>
     
