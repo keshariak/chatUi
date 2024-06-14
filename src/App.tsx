@@ -1,19 +1,18 @@
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import ChatLayout from "./_chat/ChatLayout";
+import Right from "./components/right";
 
-import './App.css'
-import Left from "./Component/left"
-import Right from "./Component/right"
 function App() {
-
-
   return (
-   <div className=' h-screen w-full  flex'>
-    <Left></Left>
-    <Right></Right>
-    
-
-   </div>
-
-  )
+    <>
+      <Routes>
+        <Route path="/" element={<ChatLayout />}>
+          <Route path="chat/:userId" element={<Right />} />
+        </Route>
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
