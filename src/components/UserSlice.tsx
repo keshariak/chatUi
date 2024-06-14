@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import threedot from "../assets/Icon.png";
 
 function UserSlice({ user }: any) {
+  console.log(user.profilePictureURL)
   return (
     <Link
       to={`/chat/${user.userId}`}
@@ -14,11 +15,17 @@ function UserSlice({ user }: any) {
           alt="userimage"
         />
       </div>
-      <div className="ml-3">
+      <div className="ml-3  w-4/6">
         <h2 className="font-bold ">{user.name}</h2>
-        <p className="text-sm ">
+
+        <div className="">
+        <p className="text-sm truncate">
           {user.chat[user.chat.length - 1].you.message}
         </p>
+
+
+        </div>
+        
       </div>
       <img className="flex ml-auto mr-2" src={threedot} alt="" />
     </Link>
