@@ -7,23 +7,23 @@ const userData = [
       "https://www.pexels.com/photo/portrait-photo-of-smiling-man-with-his-arms-crossed-standing-in-front-of-a-wall-2379004/",
     chat: [
       {
-        otherUser: {
-          message: "Hello",
-          timeStamp: "10:40",
-        },
         you: {
           message: "Hey",
           timeStamp: "10:41",
         },
+        otherUser: {
+          message: "Hello",
+          timeStamp: "10:40",
+        },
       },
       {
-        otherUser: {
-          message: "How are you doing?",
-          timeStamp: "10:41",
-        },
         you: {
           message: "Fine mate, how about you?",
           timeStamp: "10:42",
+        },
+        otherUser: {
+          message: "How are you doing?",
+          timeStamp: "10:41",
         },
       },
       {
