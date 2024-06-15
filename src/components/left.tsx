@@ -1,11 +1,26 @@
-import userData from "../data";
+import { useState } from "react";
+import { useChat } from "../provider/ChatProvider";
 import UserSlice from "./UserSlice";
+
 function Left() {
+  const { users, setUsers } = useChat();
+  const [openModalUserId, setOpenModalUserId] = useState(null);
+
+  const handleModalToggle = (userId: any) => {
+    setOpenModalUserId((prevUserId) => (prevUserId === userId ? null : userId));
+  };
+
   return (
-    <div className="">
-      {userData.map((user) => {
-        return <UserSlice key={user.userId} user={user} />;
-      })}
+    <div>
+      {users.map((user) => (
+        <UserSlice
+          key={user.userId}
+          user={user}
+          openModalUserId={openModalUserId}
+          onToggleModal={handleModalToggle}
+          setUsers={setUsers}
+        />
+      ))}
     </div>
   );
 }
